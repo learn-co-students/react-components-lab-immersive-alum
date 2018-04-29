@@ -48,10 +48,10 @@ export class ButcherShop extends React.Component {
       'Hello! We have the following products for sale today:'
     );
     const list = React.createElement('ul', {}, [
-      React.createElement('li', {}, 'Tenderloin'),
-      React.createElement('li', {}, 'Short ribs'),
-      React.createElement('li', {}, 'Beef shin'),
-      React.createElement('li', {}, 'Ribeye')
+      <li>{BUTCHER_PRODUCTS[0]}</li>,
+      <li>{BUTCHER_PRODUCTS[1]}</li>,
+      <li>{BUTCHER_PRODUCTS[2]}</li>,
+      <li>{BUTCHER_PRODUCTS[3]}</li>
     ]);
     return React.createElement('div', { className: 'butcher-shop' }, [
       hello,
@@ -61,9 +61,6 @@ export class ButcherShop extends React.Component {
 }
 
 ReactDOM.render(
-  <div>
-    render your components here! Refer back to the previous README if you are
-    lost
-  </div>,
+  [<OlderCoaster />, <InFrontOfYou />, <ButcherShop />],
   document.getElementById('root')
 );
